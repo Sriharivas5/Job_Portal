@@ -1,0 +1,61 @@
+$lightColor: #cbccf9;
+$second: #e0dff2;
+$third: #cdc1ff;
+$fourth: #a594f9;
+$dark: #3e4684;
+
+$specaillight: #f1f7fe;
+$specialsecond: #dde5f4;
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@mixin borderHigh {
+  border-radius: 24px;
+}
+@mixin borderLow {
+  border-radius: 12px;
+}
+.appliedJobs {
+  min-height: 100vh;
+  @include flex();
+  flex-direction: column;
+  padding: 20px 0;
+  background-position: center;
+  background-size: cover;
+  background-color: $specaillight;
+}
+.jobsContainer {
+  margin: 30px 0;
+  padding: 40px;
+  width: 50%;
+  min-height: 50vh;
+  @include flex();
+  @include borderLow();
+  flex-wrap: wrap;
+  gap: 30px;
+  box-shadow: 2px 2px 10px rgb(167, 175, 210), -2px -2px 4px rgb(110, 126, 157);
+  backdrop-filter: blur(4px);
+  h2 {
+    color: $dark;
+  }
+  .jobs {
+    width: 550px;
+    height: 170px;
+    padding: 20px;
+    @include flex();
+    // @include borderLow();
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.23);
+    box-shadow: inset 2px 2px 10px rgb(167, 175, 210);
+    p {
+      font-size: 16px;
+      color: #000000;
+    }
+  }
+}

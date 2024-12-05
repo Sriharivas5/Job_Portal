@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
 
-const url =
+const URL =
   "mongodb+srv://sriharivas5:eKdIiR2TnJh5MbCM@jobportal.eaweb.mongodb.net/?retryWrites=true&w=majority&appName=JobPortal";
-const url2 = "mongodb://localhost:27017/jobportal";
 mongoose
-  .connect(url)
+  .connect(URL)
   .then(() => {
     console.log("database connected succefully");
   })

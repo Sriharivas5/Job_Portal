@@ -1,7 +1,7 @@
 require("dotenv").config({ path: "./.env" });
 
 const jwt = require("jsonwebtoken"); // For generating JSON Web Tokens (JWTs)
-const bcrypt = require("bcrypt"); // For hashing and comparing passwords
+const bcrypt = require("bcryptjs"); // For hashing and comparing passwords
 
 const User = require("../Model/authModel");
 const otpModel = require("../Model/otpModel");
